@@ -25,10 +25,21 @@ while True: #opcion para la usuario
         posicion = producto.index(buscar)
         print("El nombre del producto es:", producto[posicion])
         print("La cantidad del producto es:", cantidad[posicion])
-        print("El precio unitario de su producto es:", precio[posicion])
+        print("El precio del producto es:", precio[posicion])
     elif opcion == "3":
         buscar = input("Ingresa el nombre a modificar:")
         posicion = producto.index(buscar)
         ap = input("Ingrese el nombre de su producto:")
         ac = int(input("Ingrese la cantidad del producto:"))
         pac = int(input("Ingrese el precio de su producto:"))
+
+        producto[posicion] = ap
+        cantidad[posicion] = ac
+        precio[posicion] = pac
+    elif opcion == "4":
+        print("El nombre es:", producto)
+        print("El cantidad es:", cantidad)
+        print("El precio es:", precio)
+    else:
+        print("Saliendo")
+        break
